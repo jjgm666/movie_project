@@ -1,5 +1,5 @@
 # coding:utf-8
-from flask import Blueprint
+from flask import Blueprint   # 定义蓝图
 
 home = Blueprint("home",__name__)
 
