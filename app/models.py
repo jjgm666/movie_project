@@ -1,10 +1,11 @@
 # coding:utf-8
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
+import pymysql
 
 app = Flask(__name__)
-
-app.comfig["SQLALCHEMY_DATABASE_URI"] = "mysql://root;123456@127.0.0.1;8889/movie"
+app.config["SQLALCHEMY_DATABASE_URI"] = "mysql+pymysql://root;123456@127.0.0.1;8889/movie"
 app.config["SQLAlCHEMY_TRACK_MODIFICATIONS"] = True
 
 db = SQLAlchemy(app)
